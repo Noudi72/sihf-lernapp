@@ -19,7 +19,8 @@
       <p>10-tägiger Lernplan mit Fokus auf Technik, Taktik, Physis, Psyche und Coaching.</p>
       <div class="action-buttons">
         <a class="scroll-button" href="#questions-section">Fragen &amp; Quizkarten</a>
-        <button id="install-button" class="install-button" type="button">App installieren</button>
+        <button id="install-button" class="install-button hidden" type="button">App installieren</button>
+        <button id="ios-instructions" class="ios-button hidden" type="button">Zum Home-Bildschirm hinzufügen</button>
       </div>
     </header>
 
@@ -150,15 +151,6 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./service-worker.js").catch((error) => {
-            console.error("Service Worker Registrierung fehlgeschlagen:", error);
-          });
-        });
-      }
-    </script>
   </body>
 </html>
 

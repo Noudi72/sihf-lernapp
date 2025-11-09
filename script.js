@@ -9,16 +9,16 @@ const glossaryList = document.getElementById("glossary-list");
 const glossaryFilter = document.getElementById("glossary-filter");
 const glossarySearch = document.getElementById("glossary-search");
 const installButton = document.getElementById("install-button");
+const iosInstructionsButton = document.getElementById("ios-instructions");
 
 let deferredInstallPrompt = null;
 
 if (installButton) {
-  installButton.classList.add("hidden");
-
   window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredInstallPrompt = event;
     installButton.classList.remove("hidden");
+    iosInstructionsButton?.classList.add("hidden");
   });
 
   installButton.addEventListener("click", async () => {
@@ -39,6 +39,25 @@ if (installButton) {
   window.addEventListener("appinstalled", () => {
     deferredInstallPrompt = null;
     installButton.classList.add("hidden");
+  });
+}
+
+const isIos =
+  /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase()) && !window.MSStream;
+const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+
+if (isIos && !isStandalone && iosInstructionsButton) {
+  iosInstructionsButton.classList.remove("hidden");
+  iosInstructionsButton.addEventListener("click", () => {
+    alert("Öffne das Teilen-Menü in Safari und wähle \"Zum Home-Bildschirm\".");
+  });
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Service Worker Registrierung fehlgeschlagen:", error);
+    });
   });
 }
 
