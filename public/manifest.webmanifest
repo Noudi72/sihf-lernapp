@@ -1,8 +1,8 @@
 {
   "name": "SIHF Lernapp",
   "short_name": "SIHF Lernapp",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "../",
+  "scope": "../",
   "display": "standalone",
   "background_color": "#0b0d17",
   "theme_color": "#005fa3",
