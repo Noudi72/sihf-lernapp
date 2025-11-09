@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#005fa3" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SIHF Lernapp" />
+    <title>SIHF Lernapp</title>
+    <link rel="apple-touch-icon" href="./public/1024.png" />
+    <link rel="manifest" href="./public/manifest.webmanifest" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="brand-logo" src="./public/1024.png" alt="SIHF Logo" />
+      <h1>Lernprogramm Zwischenprüfung Eishockey</h1>
+      <p>10-tägiger Lernplan mit Fokus auf Technik, Taktik, Physis, Psyche und Coaching.</p>
+      <button id="install-button" class="install-button" type="button">App installieren</button>
+    </header>
+
+    <main>
+      <section class="intro card">
+        <h2>So nutzt du das Programm</h2>
+        <ul>
+          <li>Bearbeite täglich drei Blöcke à 45&ndash;60&nbsp;Minuten.</li>
+          <li>Plane 10&ndash;15&nbsp;Minuten Reflexion nach jedem Tag ein.</li>
+          <li>Wechsle zwischen Theorie, Praxisbeispielen und eigener Trainingsplanung.</li>
+        </ul>
+      </section>
+
+      <section class="filters card">
+        <h2>Filter</h2>
+        <div class="filter-controls">
+          <label>
+            <span>Fokus:</span>
+            <select id="focus-filter">
+              <option value="all">Alle</option>
+              <option value="Technik">Technik</option>
+              <option value="Taktik">Taktik</option>
+              <option value="Physis">Physis</option>
+              <option value="Psyche">Psyche</option>
+              <option value="Coaching">Coaching</option>
+            </select>
+          </label>
+          <label>
+            <span>Block:</span>
+            <select id="block-filter">
+              <option value="all">Alle</option>
+              <option value="Block 1">Block 1</option>
+              <option value="Block 2">Block 2</option>
+              <option value="Block 3">Block 3</option>
+              <option value="Reflexion">Reflexion</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section id="schedule" class="schedule"></section>
+
+      <section class="questions card">
+        <h2>Zusatzfragen &amp; Quizkarten</h2>
+        <p class="section-lead">
+          Kompakte Prüfungsfragen mit Antwortbausteinen sowie schnelle Karteikarten pro Themenbereich. Filtere nach Kategorie oder Frageformat
+          und blende Antworten bei Bedarf ein.
+        </p>
+
+        <div class="filter-controls">
+          <label>
+            <span>Kategorie:</span>
+            <select id="question-filter">
+              <option value="all">Alle</option>
+              <option value="Technik">Technik</option>
+              <option value="Taktik">Taktik</option>
+              <option value="Physis">Physis</option>
+              <option value="Psyche">Psyche</option>
+              <option value="Coaching">Coaching</option>
+              <option value="Methodik">Methodik</option>
+              <option value="Organisation">Organisation</option>
+              <option value="Spezialsituationen">Spezialsituationen</option>
+              <option value="Kommunikation">Kommunikation</option>
+              <option value="BASPO">BASPO</option>
+              <option value="Prüfung">Prüfung</option>
+            </select>
+          </label>
+          <label>
+            <span>Format:</span>
+            <select id="format-filter">
+              <option value="all">Alle</option>
+              <option value="Kurzantwort">Kurzantwort</option>
+              <option value="Multiple Choice">Multiple Choice</option>
+              <option value="Quizkarte">Quizkarte</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>Suche:</span>
+            <input id="question-search" type="search" placeholder="Begriffe oder Stichworte" />
+          </label>
+        </div>
+
+        <div id="question-list" class="question-list"></div>
+      </section>
+
+      <section class="glossary card">
+        <h2>Glossar</h2>
+        <p class="section-lead">
+          Kernbegriffe aus den Modulen Physis/Mental/Coaching. Nutze Filter und Suche, um Definitionen schnell zu finden. Begriffe sind
+          prüfungsreif in 1–2 Sätzen beschrieben.
+        </p>
+
+        <div class="filter-controls">
+          <label>
+            <span>Kategorie:</span>
+            <select id="glossary-filter">
+              <option value="all">Alle</option>
+              <option value="Training">Training</option>
+              <option value="Physis">Physis</option>
+              <option value="Schnelligkeit">Schnelligkeit</option>
+              <option value="Monitoring">Monitoring</option>
+              <option value="Regeneration">Regeneration</option>
+              <option value="Prävention">Prävention</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>Suche:</span>
+            <input id="glossary-search" type="search" placeholder="Begriff oder Stichwort" />
+          </label>
+        </div>
+
+        <div id="glossary-list" class="glossary-list"></div>
+      </section>
+
+      <section class="resources card">
+        <h2>Zusätzliche Tipps</h2>
+        <ul>
+          <li><strong>Aktives Lernen:</strong> Antworten laut erklären, eigene Praxisbeispiele notieren.</li>
+          <li><strong>Visualisierung:</strong> Abläufe und Trainingspläne skizzieren.</li>
+          <li><strong>Austausch:</strong> Mit Teamkollegen Fragen gegenseitig abprüfen.</li>
+          <li><strong>Balance:</strong> Ausreichend Schlaf, leichte Bewegung und Pausen einplanen.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Viel Erfolg bei der Vorbereitung!</p>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+            console.error("Service Worker Registrierung fehlgeschlagen:", error);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
+

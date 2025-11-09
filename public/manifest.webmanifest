@@ -1,0 +1,18 @@
+{
+  "name": "SIHF Lernapp",
+  "short_name": "SIHF Lernapp",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0d17",
+  "theme_color": "#005fa3",
+  "description": "Mobiles Lernprogramm zur Zwischenprüfung Eishockey mit Fragen, Glossar und Trainingsplanung.",
+  "icons": [
+    {
+      "src": "1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
+
