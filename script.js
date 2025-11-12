@@ -1,56 +1,63 @@
-const scheduleElement = document.getElementById("schedule");
-const focusFilter = document.getElementById("focus-filter");
-const blockFilter = document.getElementById("block-filter");
-const questionList = document.getElementById("question-list");
-const questionFilter = document.getElementById("question-filter");
-const formatFilter = document.getElementById("format-filter");
-const questionSearch = document.getElementById("question-search");
-const glossaryList = document.getElementById("glossary-list");
-const glossaryFilter = document.getElementById("glossary-filter");
-const glossarySearch = document.getElementById("glossary-search");
-const installButton = document.getElementById("install-button");
-const iosInstructionsButton = document.getElementById("ios-instructions");
+let scheduleElement, focusFilter, blockFilter, questionList, questionFilter, formatFilter, questionSearch;
+let glossaryList, glossaryFilter, glossarySearch, installButton, iosInstructionsButton;
 
 let deferredInstallPrompt = null;
 
-if (installButton) {
-  window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    deferredInstallPrompt = event;
-    installButton.classList.remove("hidden");
-    iosInstructionsButton?.classList.add("hidden");
-  });
+function initApp() {
+  scheduleElement = document.getElementById("schedule");
+  focusFilter = document.getElementById("focus-filter");
+  blockFilter = document.getElementById("block-filter");
+  questionList = document.getElementById("question-list");
+  questionFilter = document.getElementById("question-filter");
+  formatFilter = document.getElementById("format-filter");
+  questionSearch = document.getElementById("question-search");
+  glossaryList = document.getElementById("glossary-list");
+  glossaryFilter = document.getElementById("glossary-filter");
+  glossarySearch = document.getElementById("glossary-search");
+  installButton = document.getElementById("install-button");
+  iosInstructionsButton = document.getElementById("ios-instructions");
 
-  installButton.addEventListener("click", async () => {
-    if (!deferredInstallPrompt) {
-      return;
-    }
-    installButton.disabled = true;
-    await deferredInstallPrompt.prompt();
-    const result = await deferredInstallPrompt.userChoice;
-    if (result.outcome !== "accepted") {
-      installButton.disabled = false;
-    } else {
+  if (installButton) {
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      installButton.classList.remove("hidden");
+      if (iosInstructionsButton) {
+        iosInstructionsButton.classList.add("hidden");
+      }
+    });
+
+    installButton.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) {
+        return;
+      }
+      installButton.disabled = true;
+      await deferredInstallPrompt.prompt();
+      const result = await deferredInstallPrompt.userChoice;
+      if (result.outcome !== "accepted") {
+        installButton.disabled = false;
+      } else {
+        installButton.classList.add("hidden");
+      }
+      deferredInstallPrompt = null;
+    });
+
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
       installButton.classList.add("hidden");
-    }
-    deferredInstallPrompt = null;
-  });
+    });
+  }
 
-  window.addEventListener("appinstalled", () => {
-    deferredInstallPrompt = null;
-    installButton.classList.add("hidden");
-  });
-}
+  const isIos =
+    /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase()) && !window.MSStream;
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 
-const isIos =
-  /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase()) && !window.MSStream;
-const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
-
-if (isIos && !isStandalone && iosInstructionsButton) {
-  iosInstructionsButton.classList.remove("hidden");
-  iosInstructionsButton.addEventListener("click", () => {
-    alert("Öffne das Teilen-Menü in Safari und wähle \"Zum Home-Bildschirm\".");
-  });
+  if (isIos && !isStandalone && iosInstructionsButton) {
+    iosInstructionsButton.classList.remove("hidden");
+    iosInstructionsButton.addEventListener("click", () => {
+      alert("Öffne das Teilen-Menü in Safari und wähle \"Zum Home-Bildschirm\".");
+    });
+  }
 }
 
 if ("serviceWorker" in navigator) {
@@ -2078,10 +2085,6 @@ function renderSchedule() {
   }
 }
 
-focusFilter.addEventListener("change", renderSchedule);
-blockFilter.addEventListener("change", renderSchedule);
-
-renderSchedule();
 
 function createQuestionCard(item) {
   const card = document.createElement("article");
@@ -2191,21 +2194,39 @@ function toggleAnswer(event) {
   button.classList.toggle("secondary", !isHidden);
 }
 
-if (questionFilter) {
-  questionFilter.addEventListener("change", renderQuestionBank);
-}
-if (formatFilter) {
-  formatFilter.addEventListener("change", renderQuestionBank);
-}
-if (questionSearch) {
-  questionSearch.addEventListener("input", renderQuestionBank);
-}
-if (questionList) {
-  questionList.addEventListener("click", toggleAnswer);
-}
+  if (questionFilter) {
+    questionFilter.addEventListener("change", renderQuestionBank);
+  }
+  if (formatFilter) {
+    formatFilter.addEventListener("change", renderQuestionBank);
+  }
+  if (questionSearch) {
+    questionSearch.addEventListener("input", renderQuestionBank);
+  }
+  if (questionList) {
+    questionList.addEventListener("click", toggleAnswer);
+    renderQuestionBank();
+  }
 
-if (questionList) {
-  renderQuestionBank();
+  if (glossaryFilter) {
+    glossaryFilter.addEventListener("change", renderGlossary);
+  }
+  if (glossarySearch) {
+    glossarySearch.addEventListener("input", renderGlossary);
+  }
+  if (glossaryList) {
+    renderGlossary();
+  }
+
+  if (focusFilter) {
+    focusFilter.addEventListener("change", renderSchedule);
+  }
+  if (blockFilter) {
+    blockFilter.addEventListener("change", renderSchedule);
+  }
+  if (scheduleElement) {
+    renderSchedule();
+  }
 }
 
 function createGlossaryItem(entry) {
@@ -2268,8 +2289,9 @@ function renderGlossary() {
   });
 }
 
-glossaryFilter?.addEventListener("change", renderGlossary);
-glossarySearch?.addEventListener("input", renderGlossary);
-
-renderGlossary();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
 
