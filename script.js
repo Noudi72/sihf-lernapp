@@ -1634,7 +1634,247 @@ const questionBank = [
     format: "Kurzantwort",
     question: "Skizziere ein Bench-Coaching-Feedback, das Auto-Feedback aus der Spielform nutzt.",
     answer:
-      "Beobachtung benennen („Anzahl Passserien war tiefer als Ziel“), Spieler auf Auto-Feedback verweisen (Zielzonen/Scoring), konkrete Aufgabe geben („Nächster Shift: 3 Pässe vor Abschluss“)."
+      "Beobachtung benennen („Anzahl Passserien war tiefer als Ziel"), Spieler auf Auto-Feedback verweisen (Zielzonen/Scoring), konkrete Aufgabe geben („Nächster Shift: 3 Pässe vor Abschluss")."
+  },
+  {
+    id: "q149",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Welches sind die 3 physischen Leistungsfaktoren im Eishockey?",
+    answer:
+      "Kraft, Ausdauer und Schnelligkeit. Diese drei Faktoren bilden die Grundlage der konditionellen Substanz und interagieren in verschiedenen Mischformen wie Kraftausdauer, Schnelligkeitsausdauer und Schnellkraft."
+  },
+  {
+    id: "q150",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Erkläre mir das methodische Modell der Superkompensation.",
+    answer:
+      "Nach einer Belastung sinkt die Leistung zunächst (Ermüdung), erholt sich und steigt kurz über das Ausgangsniveau (Superkompensation). Die nächste Einheit sollte in diesem Fenster platziert werden. Zu früher Reiz führt zu chronischer Ermüdung, zu später Reiz bedeutet verpasste Anpassung."
+  },
+  {
+    id: "q151",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Was ist Hypertrophie Krafttraining?",
+    answer:
+      "Hypertrophie ist die Vergrößerung der Muskelfaser-Querschnittsfläche durch gezieltes Krafttraining. Trainingsparameter: 6-12 Wiederholungen, 75-85% der Maximalkraft, 2-4 Sätze, 2-3x pro Woche über 6-12 Wochen."
+  },
+  {
+    id: "q152",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Erkläre den Unterschied von Anaerob und Aerober im Ausdauertraining.",
+    answer:
+      "Aerob: Energiegewinnung mit Sauerstoff, für längere Belastungen (GA1, GA2, Schwelle). Anaerob: Energiegewinnung ohne Sauerstoff, für kurze, intensive Belastungen (ATP-KP-System, glykolytisch). Im Eishockey dominieren anaerobe Systeme während Shifts, aerob für Erholung zwischen Shifts."
+  },
+  {
+    id: "q153",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Welches sind die Energiequellen des Körpers?",
+    answer:
+      "ATP (Adenosintriphosphat), Glucose, Glykogen, Fett und Eiweiiss. ATP-KP für kurze Explosivität, Glykogen für anaerobe Glykolyse (30-90 Sekunden), Fett für aerobe Ausdauer, Eiweiiss als Notfallquelle bei langen Belastungen."
+  },
+  {
+    id: "q154",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Was bedeutet RSA? Wie trainiert man das?",
+    answer:
+      "RSA = Repeated Sprint Ability (Wiederholte Sprintfähigkeit). Trainiert wird mit intermittierender Methode: 6-8 Sprints à 20-30m, 20-30 Sekunden Pause (ohne vollständige Erholung), 2-3 Serien mit 3-5 Minuten Serienpause. Fokus auf Qualität und Technik."
+  },
+  {
+    id: "q155",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Schnelligkeitstraining wie gehst du da vor?",
+    answer:
+      "Ausgangsposition optimieren, Beschleunigung trainieren (0-10m), maximale Geschwindigkeit entwickeln, Bremsen und Richtungswechsel. Pausen sollten nicht länger sein als die Aktion selbst. Training nur ausgeruht, am Anfang der Einheit, mit vollständiger Erholung."
+  },
+  {
+    id: "q156",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Trainingsplanung, welche Zyklen gibt es und wie können sie aufgebaut werden?",
+    answer:
+      "Makrozyklus (Jahreszyklen/Saison), Mesozyklus (4-8 Wochen), Mikrozyklus (Wochenzyklen). Aufbau: Vorbereitung (Umfang hoch, Intensität steigend), Wettkampf (Umfang runter, Intensität hoch, Erhalt), Übergang (Regeneration). In-Season: Mikro-Dosen zur Erhaltung."
+  },
+  {
+    id: "q157",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Dein Sommertraining steht bevor. Du hast 10 Wochen Zeit deine Mannschaft im Kraftbereich zu verbessern. Wie sieht deine Planung aus? (Krafttrainingsplanungsphasen)",
+    answer:
+      "Woche 1-2: Hypertrophie (6-12 Wdh., 75-85% 1RM), Woche 3-4: Maximalkraft (1-5 Wdh., 85-95% 1RM), Woche 5-6: Schnellkraft/Power (3-5 Wdh., 60-80% 1RM, explosiv), Woche 7-8: Kraftausdauer (12-20 Wdh., 50-70% 1RM), Woche 9-10: Taper/Transfer ins Eistraining."
+  },
+  {
+    id: "q158",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Dein Sommertraining steht bevor. Wie sieht deine Ausdauerplanung aus? (Welche Methoden wendest du an?)",
+    answer:
+      "Intervalltraining (z. B. 4x4 Minuten, 3 Minuten Pause), Dauermethode (20-40 Minuten GA1), Hügelmethoden (Bergläufe für Kraftausdauer), intermittierendes Training (15/15 Sekunden on/off). Progression: Umfang steigern, dann Intensität erhöhen."
+  },
+  {
+    id: "q159",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Intermittierend Training: gib ein Beispiel",
+    answer:
+      "15 Minuten Dauerlauf, dabei alle 70 Sekunden über 5 Hürden springen. Oder: 15 Sekunden Sprint, 15 Sekunden Pause, 6-10 Wiederholungen, 2-3 Serien. Hohe intensive Belastung mit unvollständiger Erholung, hockeyrelevant für RSA."
+  },
+  {
+    id: "q160",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Zeichne das Diagramm mit den 3 Dreiecken: Intensität - Erholung - Umfang und erkläre den Zusammenhang",
+    answer:
+      "Drei überlappende Dreiecke: Intensität hoch → Umfang niedrig, Erholung lang. Umfang hoch → Intensität niedrig, Erholung kürzer. Erholung kurz → Umfang/Intensität müssen angepasst werden. Prinzip: Nicht alle drei gleichzeitig maximieren, sondern je nach Ziel priorisieren."
+  },
+  {
+    id: "q161",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Schnelligkeit: wie, wann, mit welcher Mannschaft, Planung",
+    answer:
+      "Wie: Sprintspiele, multidirektional, Beschleunigungsübungen, Schnellkraft. Wann: Am Anfang der Einheit, ausgeruht, volle Pausen. Mit welcher Mannschaft: Alle Altersstufen, angepasst an Entwicklungsstand. Planung: 1-2x pro Woche, kurze Serien (3-5 Wiederholungen), Qualität vor Quantität."
+  },
+  {
+    id: "q162",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Sprungschule: warum, was, wie, mit welcher Mannschaft, ...",
+    answer:
+      "Warum: Explosivkraft, Spannung, Gleichgewicht, Koordination, Schnellkraft entwickeln. Was: Tiefsprünge, Sprungformen (einbeinig, beidbeinig, seitlich), Box-Jumps, Medizinball-Würfe. Wie: Kurze Bodenkontaktzeit, stabile Landung, geringe Ermüdung. Mit welcher Mannschaft: Ab U13, progressiv aufbauend."
+  },
+  {
+    id: "q163",
+    category: "Physis",
+    format: "Kurzantwort",
+    question: "Warm up und cool down wozu?",
+    answer:
+      "Warm-up: Puls/Temperatur erhöhen (Raise), Zielmuskeln aktivieren/mobilisieren (Activate/Mobilize), spezifisch vorbereiten (Potentiate). Cool-down: Regeneration fördern, Laktatabbau, Beweglichkeit erhalten, psychische Entspannung. Beide reduzieren Verletzungsrisiko und verbessern Leistung."
+  },
+  {
+    id: "q164",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Was sind die 3 Grundtechniken des Trainings der Psyche?",
+    answer:
+      "Visualisieren (mentale Bilder von Bewegungen/Situationen), Selbstgespräch (innere Dialoge zur Steuerung und Motivation), Atmen (Atemregulationsübungen zur Entspannung und Fokussierung). Diese drei Techniken bilden die Basis des mentalen Trainings."
+  },
+  {
+    id: "q165",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Was ist mentaler „Flow"?",
+    answer:
+      "Flow ist ein optimaler Bewusstseinszustand, in dem man vollständig in der Tätigkeit aufgeht. Charakteristika: klare Ziele, unmittelbares Feedback, Balance zwischen Herausforderung und Fähigkeiten, Handeln und Bewusstsein verschmelzen, Zeitgefühl verändert sich, selbstvergessenes Handeln."
+  },
+  {
+    id: "q166",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Erkläre den Begriff „Visualisieren"",
+    answer:
+      "Visualisieren ist das bewusste Erzeugen mentaler Bilder von Bewegungen, Situationen oder Zielen. Es aktiviert ähnliche neuronale Muster wie die tatsächliche Ausführung und verbessert Technik, Taktik und Selbstvertrauen. Kann aus Innen- oder Außenperspektive erfolgen."
+  },
+  {
+    id: "q167",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Nenne 1 mögliche Entspannungstechnik?",
+    answer:
+      "Atemregulationsübung (z. B. Box-Breathing: 4 Sekunden einatmen, 4 Sekunden halten, 4 Sekunden ausatmen, 4 Sekunden halten). Weitere: Progressive Muskelentspannung, Autogenes Training, Meditation, Achtsamkeitsübungen."
+  },
+  {
+    id: "q168",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "In welchem Zusammenhang kennst du SMART und was bedeutet es?",
+    answer:
+      "SMART ist eine Methode zur Zielformulierung: Spezifisch (klar definiert), Messbar (Fortschritt nachvollziehbar), Attraktiv (motivierend), Realistisch (erreichbar), Terminiert (klare Frist). Wird im mentalen Training, Coaching und der Trainingsplanung verwendet, um Ziele präzise zu formulieren."
+  },
+  {
+    id: "q169",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Visualisieren hat eine Innenansicht und Aussensicht? Was ist damit gemeint?",
+    answer:
+      "Innenansicht: Man sieht die Situation durch die eigenen Augen (wie in der Realität), fühlt Bewegungen, spürt den Puck. Außenansicht: Man sieht sich selbst von außen (wie in einem Video), analysiert Technik, erkennt Fehler. Beide Perspektiven haben unterschiedliche Vorteile und sollten kombiniert werden."
+  },
+  {
+    id: "q170",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Was heisst antizipieren?",
+    answer:
+      "Antizipieren bedeutet, zukünftige Ereignisse oder Handlungen des Gegners vorauszusehen und darauf vorbereitet zu sein. Im Eishockey: Puckbewegungen, Passwege, Gegnerverhalten frühzeitig erkennen und entsprechend reagieren. Trainierbar durch Spielformen, Videoanalyse und Wahrnehmungsübungen."
+  },
+  {
+    id: "q171",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Wozu dient ein Selbstgespräch?",
+    answer:
+      "Selbstgespräch dient der Selbstregulation, Motivation, Fokussierung und Fehlerkorrektur. Positives Selbstgespräch stärkt Selbstvertrauen, negatives kann Leistung beeinträchtigen. Strategien: Instruktionen („Kopf hoch"), Motivationssätze („Ich schaffe das"), Bewertungen („Guter Pass")."
+  },
+  {
+    id: "q172",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Atemregulationsübung: beschreibe",
+    answer:
+      "Box-Breathing: 4 Sekunden einatmen, 4 Sekunden halten, 4 Sekunden ausatmen, 4 Sekunden halten. Wiederhole 4-6 Zyklen. Alternative: 4-7-8 (4s ein, 7s halten, 8s aus). Ziel: Parasympathikus aktivieren, Stress reduzieren, Fokus erhöhen. Vor Wettkampf oder in Drucksituationen anwendbar."
+  },
+  {
+    id: "q173",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Wie gibst du Feedbacks?",
+    answer:
+      "Konkret und zeitnah, auf Verhalten bezogen (nicht Person), positiv verstärkend, konstruktiv bei Fehlern. Sandwich-Methode: Positives → Verbesserung → Positives. 4 Coach-Hüte nutzen: Trainer (erklärt), Coach (fragt), Berater (co-entscheidet), Moderator (Rahmen setzt)."
+  },
+  {
+    id: "q174",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Was ist das Ziel eines Konfliktgespräches und wie gehst du dabei vor?",
+    answer:
+      "Ziel: Verständnis schaffen, Lösungen finden, Beziehung erhalten. Vorgehen: Sachlich bleiben, aktiv zuhören, Standpunkte klären, gemeinsame Interessen identifizieren, lösungsorientiert arbeiten, Vereinbarungen treffen, Nachbesprechung planen. Kind/Spieler im Zentrum, nicht Ego."
+  },
+  {
+    id: "q175",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Was verstehst du unter Persönlichkeitsentwicklung?",
+    answer:
+      "Persönlichkeitsentwicklung ist der kontinuierliche Prozess, eigene Fähigkeiten, Werte, Einstellungen und Verhaltensweisen zu reflektieren und weiterzuentwickeln. Im Sport: Selbstbewusstsein, Resilienz, Kommunikation, Führung, Verantwortung stärken. Langfristiger Prozess, der über sportliche Leistung hinausgeht."
+  },
+  {
+    id: "q176",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Antizipieren: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
+    answer:
+      "Beispiel: „Puck-Lesen" – Spieler beobachten Puckbewegungen und rufen vorher, wohin der Pass geht. Oder: 2v1 mit verdecktem Passgeber, Spieler muss früh erkennen. Videoanalyse: Stoppe Clips vor Pass/Schuss, Spieler antizipiert. Wahrnehmungsübungen mit peripherem Sehen trainieren."
+  },
+  {
+    id: "q177",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Visualisieren: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
+    answer:
+      "Beispiel: Spieler schließt Augen, visualisiert perfekten Schuss (Innenansicht: Puck, Blatt, Ziel; Außenansicht: Technik). Oder: Vor Spiel Situationen durchgehen (Face-off, Powerplay). 5-10 Minuten täglich, alle Sinne einbeziehen (sehen, hören, fühlen). Mit Atmung kombinieren."
+  },
+  {
+    id: "q178",
+    category: "Psyche",
+    format: "Kurzantwort",
+    question: "Motivation: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
+    answer:
+      "SMART-Ziele setzen: Spezifisch (z. B. „8 Slot-Shots pro Spiel"), Messbar, Attraktiv, Realistisch, Terminiert. Erfolgsjournal führen, Vorbilder analysieren, Motivationsbilder/Videos sammeln, Teamziele visualisieren, Belohnungen für Zwischenziele. Intrinsische Motivation durch Autonomie, Kompetenz, Verbundenheit fördern."
   }
 ];
 
