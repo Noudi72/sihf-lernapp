@@ -58,6 +58,40 @@ function initApp() {
       alert("Öffne das Teilen-Menü in Safari und wähle \"Zum Home-Bildschirm\".");
     });
   }
+
+  if (questionFilter) {
+    questionFilter.addEventListener("change", renderQuestionBank);
+  }
+  if (formatFilter) {
+    formatFilter.addEventListener("change", renderQuestionBank);
+  }
+  if (questionSearch) {
+    questionSearch.addEventListener("input", renderQuestionBank);
+  }
+  if (questionList) {
+    questionList.addEventListener("click", toggleAnswer);
+    renderQuestionBank();
+  }
+
+  if (glossaryFilter) {
+    glossaryFilter.addEventListener("change", renderGlossary);
+  }
+  if (glossarySearch) {
+    glossarySearch.addEventListener("input", renderGlossary);
+  }
+  if (glossaryList) {
+    renderGlossary();
+  }
+
+  if (focusFilter) {
+    focusFilter.addEventListener("change", renderSchedule);
+  }
+  if (blockFilter) {
+    blockFilter.addEventListener("change", renderSchedule);
+  }
+  if (scheduleElement) {
+    renderSchedule();
+  }
 }
 
 if ("serviceWorker" in navigator) {
@@ -1641,7 +1675,7 @@ const questionBank = [
     format: "Kurzantwort",
     question: "Skizziere ein Bench-Coaching-Feedback, das Auto-Feedback aus der Spielform nutzt.",
     answer:
-      "Beobachtung benennen („Anzahl Passserien war tiefer als Ziel"), Spieler auf Auto-Feedback verweisen (Zielzonen/Scoring), konkrete Aufgabe geben („Nächster Shift: 3 Pässe vor Abschluss")."
+      "Beobachtung benennen (\"Anzahl Passserien war tiefer als Ziel\"), Spieler auf Auto-Feedback verweisen (Zielzonen/Scoring), konkrete Aufgabe geben (\"Nächster Shift: 3 Pässe vor Abschluss\")."
   },
   {
     id: "q149",
@@ -1775,7 +1809,7 @@ const questionBank = [
     id: "q165",
     category: "Psyche",
     format: "Kurzantwort",
-    question: "Was ist mentaler „Flow"?",
+    question: "Was ist mentaler \"Flow\"?",
     answer:
       "Flow ist ein optimaler Bewusstseinszustand, in dem man vollständig in der Tätigkeit aufgeht. Charakteristika: klare Ziele, unmittelbares Feedback, Balance zwischen Herausforderung und Fähigkeiten, Handeln und Bewusstsein verschmelzen, Zeitgefühl verändert sich, selbstvergessenes Handeln."
   },
@@ -1783,7 +1817,7 @@ const questionBank = [
     id: "q166",
     category: "Psyche",
     format: "Kurzantwort",
-    question: "Erkläre den Begriff „Visualisieren"",
+    question: "Erkläre den Begriff \"Visualisieren\"",
     answer:
       "Visualisieren ist das bewusste Erzeugen mentaler Bilder von Bewegungen, Situationen oder Zielen. Es aktiviert ähnliche neuronale Muster wie die tatsächliche Ausführung und verbessert Technik, Taktik und Selbstvertrauen. Kann aus Innen- oder Außenperspektive erfolgen."
   },
@@ -1825,7 +1859,7 @@ const questionBank = [
     format: "Kurzantwort",
     question: "Wozu dient ein Selbstgespräch?",
     answer:
-      "Selbstgespräch dient der Selbstregulation, Motivation, Fokussierung und Fehlerkorrektur. Positives Selbstgespräch stärkt Selbstvertrauen, negatives kann Leistung beeinträchtigen. Strategien: Instruktionen („Kopf hoch"), Motivationssätze („Ich schaffe das"), Bewertungen („Guter Pass")."
+      "Selbstgespräch dient der Selbstregulation, Motivation, Fokussierung und Fehlerkorrektur. Positives Selbstgespräch stärkt Selbstvertrauen, negatives kann Leistung beeinträchtigen. Strategien: Instruktionen (\"Kopf hoch\"), Motivationssätze (\"Ich schaffe das\"), Bewertungen (\"Guter Pass\")."
   },
   {
     id: "q172",
@@ -1865,7 +1899,7 @@ const questionBank = [
     format: "Kurzantwort",
     question: "Antizipieren: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
     answer:
-      "Beispiel: „Puck-Lesen" – Spieler beobachten Puckbewegungen und rufen vorher, wohin der Pass geht. Oder: 2v1 mit verdecktem Passgeber, Spieler muss früh erkennen. Videoanalyse: Stoppe Clips vor Pass/Schuss, Spieler antizipiert. Wahrnehmungsübungen mit peripherem Sehen trainieren."
+      "Beispiel: \"Puck-Lesen\" – Spieler beobachten Puckbewegungen und rufen vorher, wohin der Pass geht. Oder: 2v1 mit verdecktem Passgeber, Spieler muss früh erkennen. Videoanalyse: Stoppe Clips vor Pass/Schuss, Spieler antizipiert. Wahrnehmungsübungen mit peripherem Sehen trainieren."
   },
   {
     id: "q177",
@@ -1881,7 +1915,7 @@ const questionBank = [
     format: "Kurzantwort",
     question: "Motivation: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
     answer:
-      "SMART-Ziele setzen: Spezifisch (z. B. „8 Slot-Shots pro Spiel"), Messbar, Attraktiv, Realistisch, Terminiert. Erfolgsjournal führen, Vorbilder analysieren, Motivationsbilder/Videos sammeln, Teamziele visualisieren, Belohnungen für Zwischenziele. Intrinsische Motivation durch Autonomie, Kompetenz, Verbundenheit fördern."
+      "SMART-Ziele setzen: Spezifisch (z. B. \"8 Slot-Shots pro Spiel\"), Messbar, Attraktiv, Realistisch, Terminiert. Erfolgsjournal führen, Vorbilder analysieren, Motivationsbilder/Videos sammeln, Teamziele visualisieren, Belohnungen für Zwischenziele. Intrinsische Motivation durch Autonomie, Kompetenz, Verbundenheit fördern."
   }
 ];
 
@@ -2192,41 +2226,6 @@ function toggleAnswer(event) {
   answerElement.classList.toggle("hidden", !isHidden);
   button.textContent = isHidden ? "Antwort ausblenden" : "Antwort zeigen";
   button.classList.toggle("secondary", !isHidden);
-}
-
-  if (questionFilter) {
-    questionFilter.addEventListener("change", renderQuestionBank);
-  }
-  if (formatFilter) {
-    formatFilter.addEventListener("change", renderQuestionBank);
-  }
-  if (questionSearch) {
-    questionSearch.addEventListener("input", renderQuestionBank);
-  }
-  if (questionList) {
-    questionList.addEventListener("click", toggleAnswer);
-    renderQuestionBank();
-  }
-
-  if (glossaryFilter) {
-    glossaryFilter.addEventListener("change", renderGlossary);
-  }
-  if (glossarySearch) {
-    glossarySearch.addEventListener("input", renderGlossary);
-  }
-  if (glossaryList) {
-    renderGlossary();
-  }
-
-  if (focusFilter) {
-    focusFilter.addEventListener("change", renderSchedule);
-  }
-  if (blockFilter) {
-    blockFilter.addEventListener("change", renderSchedule);
-  }
-  if (scheduleElement) {
-    renderSchedule();
-  }
 }
 
 function createGlossaryItem(entry) {
