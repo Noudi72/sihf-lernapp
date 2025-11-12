@@ -2191,12 +2191,22 @@ function toggleAnswer(event) {
   button.classList.toggle("secondary", !isHidden);
 }
 
-questionFilter.addEventListener("change", renderQuestionBank);
-formatFilter.addEventListener("change", renderQuestionBank);
-questionSearch.addEventListener("input", renderQuestionBank);
-questionList.addEventListener("click", toggleAnswer);
+if (questionFilter) {
+  questionFilter.addEventListener("change", renderQuestionBank);
+}
+if (formatFilter) {
+  formatFilter.addEventListener("change", renderQuestionBank);
+}
+if (questionSearch) {
+  questionSearch.addEventListener("input", renderQuestionBank);
+}
+if (questionList) {
+  questionList.addEventListener("click", toggleAnswer);
+}
 
-renderQuestionBank();
+if (questionList) {
+  renderQuestionBank();
+}
 
 function createGlossaryItem(entry) {
   const item = document.createElement("article");
