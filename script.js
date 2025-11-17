@@ -1916,6 +1916,142 @@ const questionBank = [
     question: "Motivation: kennst du eine Übung aus der Broschüre oder sonst noch eine?",
     answer:
       "SMART-Ziele setzen: Spezifisch (z. B. \"8 Slot-Shots pro Spiel\"), Messbar, Attraktiv, Realistisch, Terminiert. Erfolgsjournal führen, Vorbilder analysieren, Motivationsbilder/Videos sammeln, Teamziele visualisieren, Belohnungen für Zwischenziele. Intrinsische Motivation durch Autonomie, Kompetenz, Verbundenheit fördern."
+  },
+  {
+    id: "q179",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Was unterscheidet Handlungsziele von Resultatzielen?",
+    answer:
+      "Handlungsziele = Prozess/Verhalten, direkt beeinflussbar (z. B. \"≥8 Slot-Shots\"). Resultatziele = Ergebnis/Score, nur indirekt beeinflussbar (z. B. \"Spiel gewinnen\")."
+  },
+  {
+    id: "q180",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Formuliere ein konkretes Ziel nach SMART.",
+    answer:
+      "\"Bis 31.12. erzielen wir ≥8 Slot-Abschlüsse/Spiel (Video-Tracking), indem wir die Kontaktzeit ≤0,8 s halten und One-Touch-Pässe forcieren.\""
+  },
+  {
+    id: "q181",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Was verstehst du unter spielnahem Training?",
+    answer:
+      "Übungs-/Spielformen mit Zeit-/Raum-/Gegnerdruck, Entscheidungen, Scoring/Regeln – hoher Transfer ins Spiel."
+  },
+  {
+    id: "q182",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Unterschied \"Teaching the game\" zu Taktik",
+    answer:
+      "\"Teaching the game\" = Prinzipien/Rollen verstehen (spielerzentriert). Taktik = konkrete Systeme/Abläufe (z. B. 1-2-2, Breakout-Muster)."
+  },
+  {
+    id: "q183",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "4 Coachhüte – Feedbackart des Trainers (Teacher)",
+    answer:
+      "Direktiv & präzise: zeigen, vormachen, klare Korrekturhinweise (\"Cues\"), Dosierung/Organisation."
+  },
+  {
+    id: "q184",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Feedbackart des Coaches",
+    answer:
+      "Fragend/entdeckend: Spieler reflektieren lassen, Lösungen erarbeiten, externe Aufmerksamkeits-Cues."
+  },
+  {
+    id: "q185",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Feedbackart des Beraters",
+    answer:
+      "Options- & erfahrungsbasiert: gemeinsam Varianten abwägen, Vor-/Nachteile klären, Co-Entscheidung."
+  },
+  {
+    id: "q186",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Was beinhaltet das Konzept FTEM-Eishockey?",
+    answer:
+      "Foundation – Talent – Elite – Mastery: alters-/stufengerechte Entwicklung mit passenden Inhalten & Wettkampfbelastungen."
+  },
+  {
+    id: "q187",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Welche Gedanken machst du dir bei der Integration der Torhüter ins Teamtraining?",
+    answer:
+      "Früh & gezielt einbinden, klare Schussqualität/Serien, Belastung steuern, Abstimmung mit Goalie-Coach, Kommunikation mit Schützen."
+  },
+  {
+    id: "q188",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Wieso ist es wichtig, die Charaktere der Konferenzteilnehmer zu kennen?",
+    answer:
+      "Passende Kommunikation, höhere Akzeptanz, bessere Entscheidungen, Konfliktprävention."
+  },
+  {
+    id: "q189",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Charakterplakat – Botschaft und Inhalt der Kampagne",
+    answer:
+      "Teamwerte sichtbar (Respekt, Einsatz, Disziplin, Verantwortung) + konkrete Verhaltenserwartungen im Alltag/Spiel."
+  },
+  {
+    id: "q190",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Kommunikationsmodell Sender–Empfänger erklären",
+    answer:
+      "Codierung → Kanal → Decodierung, Störungen (Noise) möglich; Feedback schließt den Kreis; Sache- & Beziehungsebene beachten (\"Ich-Botschaften\")."
+  },
+  {
+    id: "q191",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "4 Handlungskompetenzen im Coaching",
+    answer:
+      "Fach-, Methoden-, Sozial-, Selbstkompetenz."
+  },
+  {
+    id: "q192",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Respect on & off the Ice – Themen/Inhalte",
+    answer:
+      "Fair Play, Respekt gegenüber Schiris/Gegnern/Team, Sicherheit, Anti-Diskriminierung, Eltern- & Fankultur."
+  },
+  {
+    id: "q193",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Sicherheit: Merkblatt Unfallprävention im Eishockey",
+    answer:
+      "Ausrüstung prüfen, Eis/Material checken, Aufwärmen, Regeln (Kopf/Boarding) durchsetzen, saubere Technik, Belastung dosieren, Erste Hilfe/EAP bereit."
+  },
+  {
+    id: "q194",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "4 Handlungsfelder im Bereich \"Vermitteln\"",
+    answer:
+      "Organisieren, Instruieren, Korrigieren, Motivieren/Begleiten."
+  },
+  {
+    id: "q195",
+    category: "Coaching",
+    format: "Kurzantwort",
+    question: "Erkläre: \"Qualitativ hochstehende Trainings folgen einem roten Faden…\"",
+    answer:
+      "Klare Ziele, abgestimmte Lektionsteile (Aktivierung → Kern → Anwendung → Spiel), Progression (isoliert → Druck → Entscheidung), Transfer sichern; Inhalte bauen logisch aufeinander auf."
   }
 ];
 
